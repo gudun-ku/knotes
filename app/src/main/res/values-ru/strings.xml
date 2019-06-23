@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">KNotes</string>
+    <string name="title_activity_navigation">Навигация</string>
+    <string name="title_home">Домой</string>
+    <string name="title_dashboard">Обзор</string>
+    <string name="title_notifications">Замечания</string>
+
+    <string name="title_tasks">Задачи</string>
+    <string name="title_notes">Заметки</string>
+</resources>
