@@ -25,7 +25,6 @@ class NotesListFragment : Fragment() {
     }
 
     companion object {
-        @JvmStatic
         fun newInstance() = NotesListFragment()
     }
 }

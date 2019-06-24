@@ -6,8 +6,11 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.LinearLayoutManager
 
 import com.beloushkin.learning.android.knotes.R
+import com.beloushkin.learning.android.knotes.models.Task
+import kotlinx.android.synthetic.main.fragment_tasks_list.*
 
 class TasksListFragment : Fragment() {
 
@@ -23,9 +26,20 @@ class TasksListFragment : Fragment() {
         return inflater.inflate(R.layout.fragment_tasks_list, container, false)
     }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        recyclerView.layoutManager = LinearLayoutManager(context)
+        val adapter = TaskAdapter(mutableListOf(
+            Task("Testing one!"),
+            Task("Testing two!")
+        ))
+        recyclerView.adapter = adapter
+
+    }
+
 
     companion object {
-        @JvmStatic
         fun newInstance() = TasksListFragment()
     }
 }
